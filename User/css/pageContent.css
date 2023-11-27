@@ -1,0 +1,29 @@
+.h100px {
+  height: 100px;
+}
+
+.h250px {
+  height: 250px;
+}
+
+.h300px {
+  height: 300px;
+}
+
+.w100px {
+  width: 100px;
+}
+
+.bgp {
+  background-image: url(../imgs/img1.jpg);
+  background-size: cover;
+  background-position: 0 100;
+}
+
+aside .nav .nav-link.active {
+  border-bottom: 3px solid #172dee;
+}
+
+section {
+  min-height: 600px;
+}/*# sourceMappingURL=pageContent.css.map */

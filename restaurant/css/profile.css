@@ -1,0 +1,21 @@
+.profilebox {
+  width: 70vw;
+  padding: 30px;
+}
+
+.avatarbox {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.imgbox {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+body {
+  background-color: #f1ece2;
+}/*# sourceMappingURL=profile.css.map */

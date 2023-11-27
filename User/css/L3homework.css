@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap");
+.fz60px {
+  font-size: 60px;
+}
+
+.ms45rem {
+  margin-left: 45rem;
+}
+
+.mb10rem {
+  margin-bottom: 10rem;
+}
+
+.h100px {
+  height: 100px;
+}
+
+.w80px {
+  width: 80px;
+}
+
+.marginimg1 {
+  margin-bottom: 200px;
+  margin-left: 100px;
+}
+
+.marginimg2 {
+  margin-bottom: 800px;
+  margin-left: 100px;
+}
+
+.textshadows {
+  text-shadow: 3px 3px 10px black;
+}
+
+body {
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+.cansee:hover .nosee {
+  opacity: 1;
+  background-color: #4d4d4d;
+  width: 80px;
+}
+
+.cansee:hover {
+  background-color: #4d4d4d;
+  width: 80px;
+}
+
+.nosee {
+  opacity: 0;
+}
+
+.whitehyper {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.card img {
+  transform: scale(1, 1);
+  transition: all 1s ease-out;
+}
+
+.card img:hover {
+  transform: scale(1.2, 1.2);
+}/*# sourceMappingURL=L3homework.css.map */

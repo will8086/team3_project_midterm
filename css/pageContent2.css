@@ -1,0 +1,56 @@
+.h30px {
+  height: 30px;
+}
+
+.h50px {
+  height: 50px;
+}
+
+.h100px {
+  height: 100px;
+}
+
+.h250px {
+  height: 250px;
+}
+
+.h300px {
+  height: 300px;
+}
+
+.h700px {
+  height: 700px;
+}
+
+.w30px {
+  width: 30px;
+}
+
+.w100px {
+  width: 100px;
+}
+
+.bgp {
+  background-image: url(../DSC02355.JPG);
+  background-size: cover;
+  background-position: 0 100;
+}
+
+aside .nav .nav-link.active {
+  border-bottom: 3px solid #172dee;
+}
+
+section {
+  min-height: 600px;
+}
+
+.b5px {
+  bottom: 5px;
+}
+
+.pc1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+}/*# sourceMappingURL=pageContent2.css.map */

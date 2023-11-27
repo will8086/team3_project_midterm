@@ -1,0 +1,23 @@
+html, body {
+  height: 100%;
+}
+
+.w180px {
+  width: 180px;
+}
+
+.w250px {
+  width: 250px;
+}
+
+.bg-pink {
+  background-color: #fcc1c1;
+}
+
+main {
+  width: 100%;
+}
+
+.mm2 {
+  margin-right: -15px;
+}/*# sourceMappingURL=pageDashboard.css.map */

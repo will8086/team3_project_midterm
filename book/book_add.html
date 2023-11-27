@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <style>
+        .pcolor {
+            background-color: #777e5c;
+            color: white;
+        }
+
+        .text-end .btn-light {
+            --bs-btn-color: azure;
+            --bs-btn-bg: #777e5c;
+        }
+
+        .container {
+            background-color: #F1Ece2;
+        }
+
+        .btn-auto {
+            position: fixed;
+            bottom: 5px;
+            left: 5px;
+        }
+    </style>
+    <title>增加資料</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <form action="./navbar.php?webpage=book_insert.php" method="post">
+            <div class="contentArea">
+                <div class="input-group mt-5">
+                    <span class="pcolor input-group-text">會員編號</span>
+                    <input name="user_id[]" type="text" class="form-control" placeholder="訂位人">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">餐廳編號</span>
+                    <input name="restaurant_id[]" type="text" class="form-control" placeholder="預定餐廳">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">日期</span>
+                    <input name="available_date[]" type="date" class="form-control">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">時間</span>
+                    <input name="available_time[]" type="time" class="form-control">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">人數</span>
+                    <select name="customer_nums[]" class="form-control">
+                        <option value="">--請選擇用餐人數--</option>
+                        <script>
+                            for (i = 1; i < 11; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="my-3 text-end">
+                <button type="submit" class="btn btn-light btn-sm">送出</button>
+                <button class="btn btn-light btn-sm btn-add">增加一組</button>
+            </div>
+        </form>
+    </div>
+    <div class="my-3">
+        <button class="btn btn-light btn-sm btn-auto">自動寫入</button>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btn_add = document.querySelector(".btn-add");
+        const contentArea = document.querySelector(".contentArea");
+        const btn_auto = document.querySelector(".btn-auto");
+        btn_add.addEventListener("click", function (e) {
+            e.preventDefault();
+            let dom = document.createElement("div");
+            let template = `<div class="input-group mt-5">
+                    <span class="pcolor input-group-text">會員編號</span>
+                    <input name="user_id[]" type="text" class="form-control" placeholder="訂位人">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">餐廳編號</span>
+                    <input name="restaurant_id[]" type="text" class="form-control" placeholder="預定餐廳">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">日期</span>
+                    <input name="available_date[]" type="date" class="form-control">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">時間</span>
+                    <input name="available_time[]" type="time" class="form-control">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">人數</span>
+                    <select name="customer_nums[]" class="form-control">
+                        <option value="">--請選擇用餐人數--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>    
+                        <option value="3">3</option>    
+                        <option value="4">4</option>    
+                        <option value="5">5</option>    
+                        <option value="6">6</option>    
+                        <option value="7">7</option>    
+                        <option value="8">8</option>    
+                        <option value="9">9</option>    
+                        <option value="10">10</option>                   
+                    </select>
+                </div>`;
+            dom.innerHTML = template;
+            contentArea.prepend(dom);
+        });
+
+        btn_auto.addEventListener("click", function (f) {
+            f.preventDefault();
+            let dom2 = document.querySelector(".contentArea");
+            let template2 = `<div class="input-group mt-5">
+                    <span class="pcolor input-group-text">會員編號</span>
+                    <input name="user_id[]" type="text" class="form-control" value="19">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">餐廳編號</span>
+                    <input name="restaurant_id[]" type="text" class="form-control" value="7">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">日期</span>
+                    <input name="available_date[]" type="date" class="form-control" value="2023-08-05">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">時間</span>
+                    <input name="available_time[]" type="text" class="form-control" value="18:00:00">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">人數</span>
+                    <select name="customer_nums[]" class="form-control"> 
+                        <option value="3" checked>3</option>                     
+                    </select>
+                </div>
+                <div class="input-group mt-5">
+                    <span class="pcolor input-group-text">會員編號</span>
+                    <input name="user_id[]" type="text" class="form-control" value="8">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">餐廳編號</span>
+                    <input name="restaurant_id[]" type="text" class="form-control" value="49">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">日期</span>
+                    <input name="available_date[]" type="date" class="form-control" value="2023-08-21">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">時間</span>
+                    <input name="available_time[]" type="text" class="form-control" value="11:30:00">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">人數</span>
+                    <select name="customer_nums[]" class="form-control"> 
+                        <option value="5" checked>5</option>                     
+                    </select>
+                </div>
+                <div class="input-group mt-5">
+                    <span class="pcolor input-group-text">會員編號</span>
+                    <input name="user_id[]" type="text" class="form-control" value="1">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">餐廳編號</span>
+                    <input name="restaurant_id[]" type="text" class="form-control" value="2">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">日期</span>
+                    <input name="available_date[]" type="date" class="form-control" value="2023-08-30">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">時間</span>
+                    <input name="available_time[]" type="text" class="form-control" value="12:00:00">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="pcolor input-group-text">人數</span>
+                    <select name="customer_nums[]" class="form-control"> 
+                        <option value="2" checked>2</option>                     
+                    </select>
+                </div>
+                `;
+            dom2.innerHTML = template2;
+        });
+    </script>
+</body>
+
+</html>

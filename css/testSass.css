@@ -1,0 +1,19 @@
+.block {
+  width: 100px;
+  height: 100px;
+  background-color: #e2a4a4;
+  font-size: 20px;
+}
+.block .space {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.block > .space2 {
+  height: 200px;
+  width: 200px;
+}
+.block > .space2.space3 {
+  height: 300px;
+  width: 300px;
+}/*# sourceMappingURL=testSass.css.map */

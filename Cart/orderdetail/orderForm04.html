@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <title>Order Detail 增加多筆資料</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <form action="../utilities/navbar.php?webpage=orderInsert.php" method="post">
+            <div class="contentArea">
+                <div class="input-group mt-2">
+                    <span class="input-group-text text-white bg2">訂單編號</span>
+                    <input name="order_id[]" type="text" class="form-control">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text text-white bg2">產品編號</span>
+                    <input name="product_id[]" type="text" class="form-control">
+                </div>
+                <div class="input-group mt-1">
+                    <span class="input-group-text text-white bg2">數量</span>
+                    <input name="num[]" type="text" class="form-control">
+                </div>
+            </div>
+
+
+            <div class="mt-1 text-end">
+                <button type="submit" class="btn btn-sm text-white bg2">送出</button>
+                <button class="btn btn-sm btn-add text-white bg2 ">增加一組</button>
+            </div>
+        </form>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btn_add = document.querySelector(".btn-add");
+        const contentArea = document.querySelector(".contentArea");
+        btn_add.addEventListener("click", function (e) {
+            //建立空的div, 指定內容給他, 並塞進去
+            e.preventDefault();
+            let dom = document.createElement("div");
+            let template = `      <div class="input-group mt-2">
+                    <span class="input-group-text text-white bg2">訂單編號</span>
+                    <input name="order_id[]" type="text" class="form-control">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text text-white bg2">產品編號</span>
+                    <input name="product_id[]" type="text" class="form-control">
+                </div>
+                <div class="input-group mt-1">
+                    <span class="input-group-text text-white bg2">數量</span>
+                    <input name="num[]" type="text" class="form-control">
+                </div>`;
+            dom.innerHTML = template;
+            contentArea.append(dom);
+
+        });
+    </script>
+</body>
+
+</html>

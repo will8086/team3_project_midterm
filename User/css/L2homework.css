@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Rubik+Microbe&display=swap");
+.h100px {
+  height: 100px;
+}
+
+.fz50px {
+  font-size: 50px;
+}
+
+.mb2rem {
+  margin-bottom: 2rem;
+}
+
+.family {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Rubik Microbe", cursive;
+}
+
+.fontcolor {
+  color: #ffffff;
+}/*# sourceMappingURL=L2homework.css.map */

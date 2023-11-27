@@ -1,0 +1,7 @@
+.callout {
+  --callout-background-color: rgba(255, 216, 216, 0.9678431373);
+  --border-left-line: 15px solid rgba(221, 0, 0, 0.8552941176);
+  background-color: var(--callout-background-color);
+  border-left: var(--border-left-line);
+  padding: 10px;
+}/*# sourceMappingURL=testCallout.css.map */
